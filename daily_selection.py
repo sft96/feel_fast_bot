@@ -71,8 +71,8 @@ def weather(update, context):
 def bot_launch(update, context):
     chat = update.effective_chat
     name = update.message.chat.first_name
-    button = ReplyKeyboardMarkup([["/Курсы валют"], ["/Погода"],
-                                 ["/Авиабилеты"]], resize_keyboard=True)
+    button = ReplyKeyboardMarkup([["/exchange_rates"], ["/weather"],
+                                 ["/air_tickets"]], resize_keyboard=True)
     context.bot.send_message(chat_id=chat.id,
                              text="Спасибо, что включили меня, "
                                   "{}!".format(name), reply_markup=button)
